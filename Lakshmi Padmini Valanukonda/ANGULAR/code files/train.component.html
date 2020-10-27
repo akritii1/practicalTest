@@ -1,0 +1,106 @@
+<style>
+   
+    table {
+      width:100%;
+
+    }
+    table, th, td {
+      border: 1px solid rgb(100, 98, 96);
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    #t01 tr:nth-child(even) {
+      background-color: #eee;
+    }
+    #t01 tr:nth-child(odd) {
+     background-color: #fff;
+    }
+    #t01 th {
+      background-color:rgb(56, 173, 128);
+      color:black;
+    }
+    input[type=text], input[type=password],input[type=email] {
+          width: 225px;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        .img1 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    
+  }
+  .back
+  {
+      background-image: url("../../assets/icon.jfif");
+      background-repeat:repeat;
+      height: 800;
+      width: 800;
+  }
+  .table-hover tbody tr:hover td{
+      background-color:cadetblue;
+  }
+
+    </style>
+    <div class="back">
+    <div class = "topnav" >
+      <ul class = "topnav-ul">
+        <li><a routerLink="../Home"><img src = '../../../assets/icon2.jfif' class ="logo" style="height: 30px;"></a></li>
+          <li style = "float: right;"><a routerLink="../Pass">Passenger Information</a></li>
+          <li style = "float: right;"><a routerLink="../Train">Train Infrormation</a></li>
+          <li><p class = "topnav-text">HindustanRailways</p></li>
+        </ul>
+    </div>
+      <br/><br/><br/>
+      <h2 style="margin-left: 20px; color:white" >Find MY Train with Train No.</h2>
+      <input type="text" class="form-control" placeholder="Enter Train no." [(ngModel)]="no" style="margin-left: 20px;">
+      <div *ngIf="no!=''" class="back">
+      <div style="margin-left: 20px;margin-right: 20px;" class="back">
+    <table id="t01" class="table table-hover">
+      <th>Train Number</th>
+      <th>Train Name</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Total Seats </th>
+      <tr *ngFor="let e of use | filter: 'train_no' :no ;let i = index">
+        <td>{{e.train_no}}</td>
+        <td>{{e.train_name}}</td>
+        <td>{{e.source}}</td>
+        <td>{{e.destination}}</td>
+        <td>{{e.total_seats}}</td>
+            </tr></table></div></div>
+    <div *ngIf="no==''" >
+        <div style="margin-left: 20px;margin-right: 20px;">
+      <table id="t01">
+        <th>Train Number</th>
+        <th>Train Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Total Seats </th>
+        <tr *ngFor="let e of use | filter: 'train_no' :no ;let i = index">
+          <td>{{e.train_no}}</td>
+          <td>{{e.train_name}}</td>
+          <td>{{e.source}}</td>
+          <td>{{e.destination}}</td>
+          <td>{{e.total_seats}}</td>
+          
+      </tr></table></div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+    </div>
+

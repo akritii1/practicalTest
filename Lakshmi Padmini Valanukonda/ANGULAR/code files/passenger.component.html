@@ -1,0 +1,45 @@
+<div class = "topnav">
+    <ul class = "topnav-ul">
+      <li><a routerLink="../Home"><img src = '../../../assets/icon2.jfif' class ="logo" style="height: 35px;"></a></li>
+        <li style = "float: right;"><a routerLink="../Pass">Passenger Information</a></li>
+        <li style = "float: right;"><a routerLink="../Train">Train Information</a></li>
+        <li><p class = "topnav-text">Hindustan Railways</p></li>
+      </ul>
+  </div>
+
+  <h2 style="margin-left: 20px;">Find Passenger Details by Name:</h2>
+      <input type="text" class="form-control" placeholder="Search by Name" [(ngModel)]="no" style="margin-left: 20px;">
+      <div *ngIf="no!=''">
+      <div style="margin-left: 20px;margin-right: 20px;">
+    <table id="t01">
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Contact </th>
+      <tr *ngFor="let p of use | filter: 'name' :no ;let i = index">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.contact}}</td>
+    </tr></table></div></div>
+    <div *ngIf="no==''">
+        <div style="margin-left: 20px;margin-right: 20px;">
+      <table id="t01">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Contact </th>
+        <tr *ngFor="let e of use | filter: 'name' :no ;let i = index">
+          <td>{{e.id}}</td>
+          <td>{{e.name}}</td>
+          <td>{{e.age}}</td>
+          <td>{{e.gender}}</td>
+          <td>{{e.contact}}</td>
+      </tr></table></div>
+   
+
+
+

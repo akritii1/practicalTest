@@ -1,0 +1,44 @@
+.topnav-text{
+    text-align : center;
+    margin-left : 500px;
+    color :white;
+    font-weight: bold;
+    margin-top: 18px;
+  }
+  
+  .topnav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(41, 96, 112);
+  }
+  
+  .topnav-ul li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  #t01 th {
+    background-color:  rgb(0, 119, 128);
+    color: black;
+  }
+  li a:hover {
+    background-color: rgb(124, 145, 124);
+    z-index: 1;
+  }
+  
+  .logo {
+  display: inline-block;
+    vertical-align: top;
+    width: 55px;
+    height: 55px;
+    margin-top: 1px; 
+    background-color: aliceblue;
+  } 
+ 

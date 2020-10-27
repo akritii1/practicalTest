@@ -1,0 +1,19 @@
+export class TrainInfo{
+    train_no:String;
+    train_name:String;
+    source:String;
+    destination:String;
+    total_seats:String;
+    constructor(train_no:String,
+        train_name:String,
+        source:String,
+        destination:String,
+        total_seats:String,
+        ){
+         this.train_no=train_no;
+         this.train_name=this.train_name;
+         this.source=source;
+         this.destination=destination;
+         this.total_seats=total_seats;
+    }
+}
